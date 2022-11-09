@@ -13,7 +13,7 @@ git clone --recursive https://github.com/xicodomingues/francinette.git
 if [ "$(uname)" != "Darwin" ]; then
 	echo "Admin permissions needed to install C compilers, python, and upgrade current packages"
 	case $(lsb_release -is) in
-		"Ubuntu")
+		"Ubuntu" | "Debian")
 			sudo apt update
 			sudo apt upgrade
 			sudo apt install gcc clang libpq-dev libbsd-dev libncurses-dev valgrind -y
