@@ -5,3 +5,4 @@ rich
 toml
 certifi
 packaging
+norminette
