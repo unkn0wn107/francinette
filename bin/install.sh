@@ -19,7 +19,7 @@ if [ "$(uname)" != "Darwin" ]; then
 			sudo apt install gcc clang libpq-dev libbsd-dev libncurses-dev valgrind -y
 			sudo apt install python-dev python3-pip -y
 			sudo apt install python3-dev python3-venv python3-wheel -y
-			pip3 install wheel
+			pip3 install --upgrade pip setuptools wheel
 			;;
 		"Arch")
 			sudo pacman -Syu
