@@ -7,6 +7,9 @@ mkdir temp_____
 cd temp_____ || exit
 rm -rf francinette
 
+# download github
+git clone --recursive https://github.com/xicodomingues/francinette.git
+
 if [ "$(uname)" != "Darwin" ]; then
 	echo "Admin permissions needed to install C compilers, python, and upgrade current packages"
 	case $(lsb_release -is) in
@@ -15,7 +18,7 @@ if [ "$(uname)" != "Darwin" ]; then
 			sudo apt upgrade
 			sudo apt install gcc clang libpq-dev libbsd-dev libncurses-dev valgrind -y
 			sudo apt install python-dev python-pip python3-pip -y
-			sudo apt install python3-dev python3-venv python3-wheel -y
+			sudo apt install python3-dev python3-venv python3-wheel python3-testresources -y
 			pip3 install --upgrade pip setuptools wheel
 			;;
 		"Arch")
@@ -26,9 +29,6 @@ if [ "$(uname)" != "Darwin" ]; then
 			;;
 	esac
 fi
-
-# download github
-git clone --recursive https://github.com/xicodomingues/francinette.git
 
 cp -r francinette ..
 
