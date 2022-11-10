@@ -17,8 +17,8 @@ if [ "$(uname)" != "Darwin" ]; then
 			sudo apt update
 			sudo apt upgrade
 			sudo apt install gcc clang libpq-dev libbsd-dev libncurses-dev valgrind -y
-			sudo apt install python-dev python-pip python3-pip -y
-			sudo apt install python3-dev python3-venv python3-wheel python3-testresources -y
+			sudo apt install python-dev python3-dev python-pip python3-pip -y
+			sudo apt install python3-venv python3-wheel python3-testresources python3-halo -y
 			pip3 install --upgrade pip setuptools wheel
 			;;
 		"Arch")
